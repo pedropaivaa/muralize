@@ -46,7 +46,7 @@ O objetivo do Muralize é oferecer uma solução eficiente para que **professore
 
 ```bash
 # Clone o repositório
-git clone https://github.com/soophiiaaa/muralize.git
+git clone https://github.com/pedropaivaa/muralize.git
 
 # Acesse o diretório
 cd muralize

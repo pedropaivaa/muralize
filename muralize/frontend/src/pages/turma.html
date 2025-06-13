@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Turma</title>
+  <link rel="icon" href="../assets/icons/icon-muralize.jpg" type="image/jpg" sizes="32x32" />
+  <link rel="stylesheet" href="../styles/turma_style.css" />
+</head>
+<body>
+
+  <div class="titulo-turma" id="tituloTurma">Turma</div>
+
+
+  <div id="botaoCriarContainer" class="criar-atividade-area">
+    <button id="botaoCriarAtividade" onclick="abrirFormularioAtividade()">+ Criar Atividade</button>
+  </div>
+
+  <div id="formAtividadeContainer" class="formulario escondido">
+    <h4>Nova Atividade</h4>
+    <input type="text" id="tipoAtividade" placeholder="Tipo da Atividade" />
+    <input type="text" id="nomeAtividade" placeholder="Nome da Atividade" />
+    <input type="date" id="dataEntrega" />
+    <textarea id="descricao" placeholder="Explicação breve"></textarea>
+    <button onclick="criarAtividade()">Criar</button>
+  </div>
+
+
+  <div id="atividadesLista"></div>
+
+  <div id="secao-remote" class="secao escondido">
+    <h3>Chat ao Vivo</h3>
+    <div id="chatBox" class="chat-box"></div>
+    <input type="text" id="mensagem" placeholder="Digite sua mensagem..." />
+    <button onclick="enviarMensagem()">Enviar</button>
+  </div>
+  <div id="menuInferior" class="menu-inferior">
+    <div class="menu-botao" onclick="mostrarSecao('atividades')">Atividades</div>
+    <div class="menu-botao" onclick="mostrarSecao('remote')">Remote</div>
+  </div>
+
+  <script src="../scripts/turma.js"></script>
+</body>
+</html>

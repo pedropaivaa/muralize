@@ -1,0 +1,57 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../assets/icons/icon-muralize.jpg" type="image/jpg" sizes="32x32" />
+  <link rel="stylesheet" href="../styles/register_style.css" />
+  <title>Login e Cadastro</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="welcome-back">
+      <h1>Bem-vindo de volta!</h1>
+    </div>
+    <div class="div-img reveal">
+      <img src="../assets/img/imagem-login.png" alt="imagem-inicio" width="460px" height="460px">
+    </div>
+
+    <div class="register">
+      <div id="role-selection" class="role-selection">
+        <h2>Você é:</h2>
+        <button onclick="selecionar('aluno')">
+          <img src="../assets/icons/aluno.png" alt="Aluno" width="50" /><br />
+          Aluno
+        </button>
+        <button onclick="selecionar('professor')">
+          <img src="../assets/icons/professor.png" alt="Professor" width="50" /><br />
+          Professor
+        </button>
+      </div>
+
+      <div id="formulario" style="display:none;">
+        <h1 id="titulo-formulario">Criar uma conta</h1>
+        <form>
+          <div id="campo-nome">
+            <input type="text" id="nome" name="nome" placeholder="Nome completo" />
+            <br />
+          </div>
+          <input type="text" id="email" name="email" placeholder="E-mail" />
+          <br />
+          <input type="password" id="senha" name="senha" placeholder="Senha" />
+          <br />
+          <button type="button" id="botao-formulario" onclick="enviarFormulario(event)">CADASTRAR</button>
+        </form>
+        <button class="voltar-btn" onclick="voltarSelecao()">Voltar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/register.js">
+  </script>
+</body>
+
+</html>

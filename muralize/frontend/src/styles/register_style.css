@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --cor-principal: #1976D2;
+  --cor-fundo: #FFFFFF;
+  --cor-texto: #263238;
+  --clique-botao: #1367bb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cor-secundaria);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "left right"
+    "left right";
+  width: 90%;
+  max-width: 1200px;
+  height: 80vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  background: var(--cor-fundo);
+}
+
+.welcome-back {
+  grid-area: left;
+  background: var(--cor-principal);
+  color: var(--cor-fundo);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.div-img {
+  grid-area: left;
+  background: var(--cor-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-back h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.div-img img {
+  max-width: 70%;
+  height: auto;
+}
+
+.register {
+  grid-area: right;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto 16px auto;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  outline: none;
+  border-color: var(--clique-botao);
+}
+
+form button#botao-formulario,
+button.voltar-btn {
+  width: 90%;
+  max-width: 200px;
+  height: 45px;
+  padding: 12px 24px;
+  display: block;
+  margin: 0 auto 12px auto;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo);
+  border: none;
+  transition: background-color 0.2s;
+}
+
+form button#botao-formulario:hover,
+button.voltar-btn:hover {
+  background-color: var(--clique-botao);
+}
+
+button.voltar-btn {
+  background-color: white;
+  color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button.voltar-btn:hover {
+  background-color: var(--cor-principal);
+  color: white;
+  border-color: var(--cor-principal);
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .welcome-back,
+  .div-img,
+  .register {
+    width: 100%;
+    padding: 20px;
+  }
+  form button#botao-formulario,
+  button.voltar-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+  form input[type="text"],
+  form input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+  }
+}
